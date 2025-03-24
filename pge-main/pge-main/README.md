@@ -33,7 +33,7 @@ O site de gestão escolar é uma plataforma integrada projetada para facilitar a
 - **Comunicação com Professores**: Possibilidade de enviar mensagens e esclarecer dúvidas.
 
 ## Conexão com o Banco de Dados
-- **Armazenamento Seguro**: Todas as informações (usuários, notas, turmas) são armazenadas em um banco de dados relacional (como MySQL, PostgreSQL ou MongoDB), garantindo a segurança e integridade dos dados.
+- **Armazenamento Seguro**: Todas as informações (usuários, notas, turmas) são armazenadas em um banco de dados relacional MySQL, garantindo a segurança e integridade dos dados.
 - **Consultas em Tempo Real**: O sistema realiza consultas em tempo real ao banco de dados, permitindo que todas as informações exibidas nas telas sejam atualizadas instantaneamente.
 - **Autenticação e Autorização**: Mecanismos de segurança para garantir que os usuários acessem apenas as informações e funcionalidades que lhes são permitidas.
 
