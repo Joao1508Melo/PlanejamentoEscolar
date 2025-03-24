@@ -1,0 +1,56 @@
+.sidepanel {
+    height: 100vh;
+    width: 0; /*muda com o javascript*/
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f1f1f1;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0s;
+}
+
+/*
+.sidepanel p{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+*/
+
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: black;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidepanel .closebtn:hover{
+    color: #818181;
+}
+
+.openbtn {
+    font-size: 20px;
+    padding: 10px 15px;
+    border: none;
+}
+
+@media screen and (max-width: 400px) {
+    .openbtn {
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+}
+
+
+
+

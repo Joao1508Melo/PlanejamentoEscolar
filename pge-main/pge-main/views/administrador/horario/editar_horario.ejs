@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Editar Horário</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../../../css/bootstrap.css">
+		<link rel="stylesheet" href="../../../css/administrador/main.css">
+		<link rel="stylesheet" href="../../../css/sidepanel-menu.css">
+		<link rel="icon" type="image/x-icon" href="../../../images/favicon.ico" />
+		<script src="../../../js/sidepanel-menu.js"></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="header p-3">
+				<header>
+					<h1 class="title fw-bold floatleft">PGE</h1>
+					<h1 class="fw-bold center mt-md-2">Fatec Zona Sul</h1>
+					<h1 class="fw-bold floatright">MEC</h1>
+				</header>
+			</div>
+			<main>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12 border border-3 border-dark p-4">
+							<%- include("../../partial/_admin_painel.ejs"); %>
+							<div class="row">
+								<h1 class="title fw-bold text-center">Editar Horário</h1>
+								<hr class="border border-dark border-1">
+								<div class="row">
+									<form method="post" action="/administrador_horario_editado">
+										<div class="row justify-content-center">
+											<div class="col-10 col-md-6">
+												<div class="row">
+													<div class="col-12 col-sm-6">
+														<div class="mb-3">
+															<label class="form-label">Código da Turma</label>
+															<input type="text" class="form-control" id="cod_turma" name="cod_turma" readonly
+															value="<%= datac[0].cod_turma%>">
+														</div>
+													</div>
+													<div class="col-12 col-sm-6">
+														<div class="mb-3">
+															<label class="form-label">Código da Disciplina</label>
+															<input type="text" class="form-control" id="cod_disciplina" name="cod_disciplina" readonly
+															value="<%= datac[0].cod_disciplina%>">
+														</div>
+													</div>
+													<div class="col-12 col-sm-6">
+														<div class="mb-3">
+															<label class="form-label">Hora</label>
+															<input type="text" class="form-control" id="hora" name="hora"
+															value="<%= datac[0].hora%>">
+														</div>
+													</div>
+													<div class="col-12 col-sm-6">
+														<div class="mb-3">
+															<label class="form-label">Dia da Semana</label>
+															<input type="text" class="form-control" id="dia_semana" name="dia_semana"
+															value="<%= datac[0].dia_semana%>">
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-12 col-sm-6 d-grid gap-2 mb-sm-0 mb-2">
+														<button type="submit" class="btn btn-success">Salvar</button>
+													</div>
+													<div class="col-12 col-sm-6 d-grid gap-2">
+														<button type="reset" class="btn btn-danger">Resetar</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<footer class="position-absolute start-50 translate-middle-x">© 2023 PGE</footer>
+			</main>
+		</div>
+	</body>
+	
+</html>

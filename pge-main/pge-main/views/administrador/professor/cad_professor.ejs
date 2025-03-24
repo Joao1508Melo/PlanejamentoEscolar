@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	
+	<head>
+		<title>Professores</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../../../css/bootstrap.css">
+		<link rel="stylesheet" href="../../../css/administrador/main.css">
+		<link rel="stylesheet" href="../../../css/sidepanel-menu.css">
+		<link rel="icon" type="image/x-icon" href="../../../images/favicon.ico" />
+		<script src="../../../js/sidepanel-menu.js"></script>
+	</head>
+	
+	<body>
+		<div class="container-fluid">
+			<div class="header p-3">
+				<header>
+					<h1 class="title fw-bold floatleft">PGE</h1>
+					<h1 class="fw-bold center mt-md-2">Fatec Zona Sul</h1>
+					<h1 class="fw-bold floatright">MEC</h1>
+				</header>
+			</div>
+			<main>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12 border border-3 border-dark p-4">
+							<%- include("../../partial/_admin_painel.ejs"); %>
+							<div class="row">
+								<h1 class="title fw-bold text-center">Novo Professor</h1>
+								<% if (message !== "") { %>
+								<h1 style="font-size:42px; color:blue; text-align:center;" id='status' class='title2'><%= message %></h1>
+								<% } %>
+								<hr class="border border-dark border-1">
+								<div class="row">
+									<form method="post" action="/administrador_professor_cadastrado">
+										<div class="row justify-content-center">
+											<div class="col-10 col-md-6">
+												<div class="row">
+													<div class="col-12 col-sm-5">
+														<div class="mb-3">
+															<label class="form-label">RP</label>
+															<input type="text" class="form-control" id="rp" name="rp">
+														</div>
+													</div>
+													<div class="col-12 col-sm-7">
+														<div class="mb-3">
+															<label class="form-label">CPF</label>
+															<input type="text" class="form-control" id="cpf" name="cpf">
+														</div>
+													</div>
+													<div class="col-12">
+														<div class="mb-3">
+															<label class="form-label">Nome</label>
+															<input type="text" class="form-control" id="nome" name="nome">
+														</div>
+													</div>
+													<div class="col-12">
+														<div class="mb-3">
+															<label class="form-label">Email</label>
+															<input type="email" class="form-control" id="email" name="email">
+														</div>
+													</div>
+													<div class="col-12 col-sm-12">
+														<div class="mb-3">
+															<label class="form-label">Data de Nascimento</label>
+															<input type="date" class="form-control" id="nasc" name="nasc">
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-12 col-sm-6 d-grid gap-2 mb-sm-0 mb-2">
+														<button type="submit" class="btn btn-success">Salvar</button>
+													</div>
+													<div class="col-12 col-sm-6 d-grid gap-2">
+														<button type="reset" class="btn btn-danger">Limpar</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<footer class="position-absolute start-50 translate-middle-x">© 2023 PGE</footer>
+			</main>
+		</div>
+	</body>
+	
+</html>

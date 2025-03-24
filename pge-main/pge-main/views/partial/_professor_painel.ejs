@@ -1,0 +1,25 @@
+<div id="mySidepanel" class="sidepanel">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<div>
+		<img alt="Editar dados" onclick="location.href='/professor_editar';" style="cursor: pointer;" class="mx-auto d-block" src="<%=foto%>" width="128px" height="128px">
+		<h6 class="fw-bold">
+			<%=usuario%><br/>
+			Professor<br/>
+			RP: <%=usuario%>
+		</h6>
+		<a href="/logout" class="btn d-grid btn-danger mb-3">Sair</a>
+	</div>
+	<div class="menu">
+		<ul>
+			<li class="p-1 ps-3" onclick="location.href='/professor';" style="cursor:pointer;">
+			Início</li>
+			<li class="p-1 ps-3" onclick="location.href='/professor_frequencia';" style="cursor:pointer;">
+				Frequência
+			</li>
+			<li class="p-1 ps-3" onclick="location.href='/professor_notas';" style="cursor:pointer;">
+				Notas
+			</li>
+		</ul>
+	</div>
+</div>
+<button class="openbtn btn btn-dark position-absolute" onclick="openNav()">&#9776;</button>

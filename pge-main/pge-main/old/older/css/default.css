@@ -1,0 +1,314 @@
+* {
+  box-sizing: border-box;
+  font-family: "Josefin Sans";
+}
+
+@font-face {
+	font-family: "Bree Serif";
+    src: url('../fonts/BreeSerif-Regular.ttf');
+}
+
+@font-face {
+	font-family: "Josefin Sans";
+    src: url('../fonts/JosefinSans-VariableFont_wght.ttf');
+}
+
+h1 {
+  font-family: "Bree Serif", Times;
+  font-size: 72px;
+  color: red;
+  margin-bottom:0;
+  margin-top: 0;
+  text-align: left; 
+}
+
+.h1main {
+  text-align: center;
+}
+
+.h1float {
+  float:left;
+  width: 20%;
+}
+
+.floatright {
+  float: left;
+  text-align: right;
+  width: 20%;
+}
+
+.topinfo {
+  font-size: 32px;
+  width:60%;
+  float: left;
+  text-align: center;
+}
+
+.header {
+  /* background-color: #000; */
+  color: black;
+  padding: 15px;
+  overflow: auto;
+  max-width: 100%;
+  border-bottom: 5px solid black;
+}
+
+h2 {
+  font-family: "Josefin Sans", Times;
+  font-size: 18px;
+  color: black;
+  text-align: center;
+  margin-top:0;
+}
+
+h3 {
+	line-height:120%;
+}
+
+a {
+	text-decoration: none;
+	font-family: "Josefin Sans";
+}
+
+a:hover {
+	color:red;
+}
+
+button {
+  font-size: 24px;
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: red;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border: none;
+}
+
+button:hover {
+  background: #dd0000;
+}
+
+input {
+	font-family: "Josefin Sans";
+}
+
+input[type=text], input[type=password], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  font-size:16px;
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+  width: 100%;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+footer {
+	text-align: center;
+    clear: both;
+    position: absolute;
+    height: 10px;
+	margin-left: 30%;
+	width:40%;
+	margin-right: 30%;
+    bottom: 20px;
+	font-family: "Bree Serif";
+}
+
+.content {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  text-align:center;
+  text-align:center;
+  width: 400px;
+  max-width: 400px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.col-15 {
+  float: left;
+  width: 15%;
+  margin-top: 6px;
+}
+
+.col-85 {
+  float: left;
+  width: 85%;
+  margin-top: 6px;
+}
+
+.col-90 {
+  float: center;
+  width: 90%;
+  margin-top: 6px;
+}
+
+.col-100 {
+  float: center;
+  width: 100%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 5px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #3333ff;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+.aside {
+  background-color: #33b5e5;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.col-3 {
+	border: 3px solid black;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-15, .col-25, .col-75, .col-85, .col-90, .col-100 input[type=submit] {
+    width: 100%;
+	max-width:100%;
+    margin-top: 0;
+  }
+  
+  .container {
+	max-width: 80%;
+  }
+  
+  h1 {
+	font-size: 72px;
+  }
+  
+  .h1float {
+  width: 70%;
+  font-size: 36px;
+  }
+  
+  .topinfo {
+  width : 100%;
+  margin: 0px;
+  font-size:24px;
+  text-align:left;
+  }
+  
+  .floatright {
+  font-size:24px;
+  text-align:left;
+  }
+  
+  img {
+  max-height: 64px;
+  }
+  
+  .col-3 {
+	border: 3px solid black !important; 
+  }
+  
+  .header {
+  border-bottom: 0;
+  }
+  
+  footer {
+	bottom: default;
+  }
+}

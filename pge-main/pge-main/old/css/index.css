@@ -1,0 +1,71 @@
+@font-face {
+    font-family: "Bree Serif";
+    src: url("../fonts/BreeSerif-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("../fonts/JosefinSans-VariableFont_wght.ttf");
+}
+
+* {
+    font-family: "Josefin Sans";
+}
+
+.content{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-family: "Bree Serif";
+}
+
+h1.title {
+    color: red;
+    font-size: 72px;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Josefin Sans";
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}
+
+.box {
+    text-align: center;
+    text-align: center;
+    width: 400px;
+    max-width: 400px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+a:hover {
+    color: red;
+}
+
+footer {
+    bottom: 10px;
+    font-family: "Bree Serif";
+}
+
+@media screen and (max-width: 600px) {
+    .box {
+        max-width: 80%;
+    }
+}

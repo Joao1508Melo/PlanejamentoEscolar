@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Cadastro Aluno</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../css/bootstrap.css">
+    <link rel="stylesheet" href="../../../css/administrador/cadastro.css">
+    <link rel="stylesheet" href="../../../css/sidepanel-menu.css">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico" />
+</head>
+
+<head>
+    <title>Cadastro Aluno</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../css/bootstrap.css">
+    <link rel="stylesheet" href="../../../css/professor/frequencia.css">
+    <link rel="stylesheet" href="../../../css/sidepanel-menu.css">
+    <link rel="icon" type="image/x-icon" href="../../../images/favicon.ico" />
+    <script src="../../../js/sidepanel-menu.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="header p-3">
+            <header>
+                <h1 class="title fw-bold floatleft">PGE</h1>
+                <h1 class="fw-bold center mt-md-2">Fatec Zona Sul</h1>
+                <h1 class="fw-bold floatright">MEC</h1>
+            </header>
+        </div>
+        <main>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 border border-3 border-dark p-4">
+                        <div id="mySidepanel" class="sidepanel">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <div>
+                                <img class="mx-auto d-block" src="../../../images/user.png">
+                                <h6 class="fw-bold">
+                                    Neymar JR<br />
+                                    Diretor<br />
+                                    Período integral<br />
+                                    RA: 6666
+                                </h6>
+                                <a href="/logout" class="btn d-grid btn-danger mb-3">Sair</a>
+                            </div>
+                            <div class="menu">
+                                <ul>
+                                    <li class="p-1 ps-3" onclick="location.href='/administrador';" style="cursor:pointer;">
+                                        Início
+                                    </li>
+                                    <li class="p-1 ps-3" onclick="location.href='/administrador_aluno';" style="cursor:pointer;">
+                                        Alunos
+                                    </li>
+                                    <li class="p-1 ps-3" onclick="location.href='../adm_professor/reg_professor.html';" style="cursor:pointer;">
+                                        Professores
+                                    </li>
+                                    <li class="p-1 ps-3" onclick="location.href='../adm_materia/reg_materia.html';" style="cursor:pointer;">
+                                        Matérias
+                                    </li>
+                                    <li class="p-1 ps-3" onclick="location.href='../adm_horario/reg_horario.html';" style="cursor:pointer;">
+                                        Horário
+                                    </li>
+                                    <li class="p-1 ps-3" onclick="location.href='../adm_turma/reg_turma.html';" style="cursor:pointer;">
+                                        Turma
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="openbtn btn btn-dark position-absolute" onclick="openNav()">&#9776;</button>
+                        <div class="row">
+							
+							<form action="/administrador_aluno_cadastrado" method="post">
+							<% if (message !== "") { %>
+								<h1 style="font-size:42px; color:blue; text-align:center;" id='status' class='title2'><%= message %></h1>
+						    <% } %>
+                            <h1 class="title2 fw-bold text-center">Cadastro Aluno</h1>
+                            <hr class="border border-dark border-1">
+                            <div class="row">
+                                <div class="container text-center">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h2 class="tittle3">Insira os dados</h2>
+                                        </div>
+                                    </div>
+                                    <div class="row materias">
+										<div class="col-lg-6 col-12">
+											<div class="mb-3">
+												<label for="exampleFormControlInput1" class="form-label">RA</label>
+												<input class="form-control" id="ra" name="ra" type="text" placeholder="1234" aria-label="default input example">
+											</div>
+                                        </div>
+										<div class="col-lg-6 col-12">
+                                            <label class="form-label">Nome</label>
+                                                <input class="form-control" id="nome" name="nome" type="text" placeholder="Nome Completo" aria-label="default input example">
+                                        </div>
+										<div class="col-lg-6 col-12">
+                                            <label for="exampleFormControlInput1" class="form-label">CPF</label>
+                                            <input class="form-control" id="cpf" name="cpf" type="text" placeholder="123.456.789-10" aria-label="default input example">
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <!-- <div class="mb-3"> -->
+                                                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                                                <input type="email" id="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
+											<!-- </div> -->
+                                        </div>
+                                        <div class="container text-center">
+                                            <br><label for="exampleFormControlInput1" class="form-label">Data de Nascimento</label><br>
+                                            <input class="form-control col-lg-6 col-12" id="nasc" name="nasc" type="date" aria-label="default input example">
+                                        </div>
+                                        <div class="container text-center">
+										<br><input type="submit" class="btn btn-outline-success" value="Salvar"></input>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							</form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="position-absolute start-50 translate-middle-x">© 2023 PGE</footer>
+        </main>
+    </div>
+</body>
+
+</html>

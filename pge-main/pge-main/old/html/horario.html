@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Horário</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/horario.css">
+    <link rel="stylesheet" href="../css/sidepanel-menu.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+    <script src="../js/sidepanel-menu.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="header p-3">
+            <header>
+                <h1 class="title fw-bold floatleft">PGE</h1>
+                <h1 class="fw-bold center mt-md-2">Fatec Zona Sul</h1>
+                <h1 class="fw-bold floatright">MEC</h1>
+            </header>
+        </div>
+        <main>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 border border-3 border-dark p-4">
+                        <div id="mySidepanel" class="sidepanel">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <div>
+                                <img class="mx-auto d-block" src="../images/user.png">
+                                <h6 class="fw-bold">
+                                    João<br />
+                                    Em curso<br />
+                                    Período Matutino<br />
+                                    RA: 1234
+                                </h6>
+                                <a href="../index.html" class="btn d-grid btn-danger mb-3">Sair</a>
+                            </div>
+                            <div class="menu">
+                                <ul>
+                                    <li class="p-1 ps-3" onclick="location.href='main.html';" style="cursor:pointer;">
+                                        Início</li>
+                                    <li class="p-1 ps-3" onclick="location.href='notas.html';" style="cursor:pointer;">
+                                        Notas
+                                    </li>
+                                    <li class="p-1 ps-3" onclick="location.href='#';" style="cursor:pointer;">
+                                        Faltas
+                                    </li>
+                                    <li class="p-1 ps-3" onclick="location.href='horario.html';"
+                                        style="cursor:pointer;">
+                                        Horário
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="openbtn btn btn-dark position-absolute" onclick="openNav()">&#9776;</button>
+                        <div class="row">
+                            <h1 class="title2 fw-bold text-center">Horário</h1>
+                            <hr class="border border-dark border-1">
+                            <div class="row">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-sm table-striped">
+                                        <thead class="text-center">
+                                            <tr>
+                                                <th scope="col">Sigla</th>
+                                                <th scope="col">Disciplina</th>
+                                                <th scope="col">Turma</th>
+                                                <th scope="col">Professor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-group-divider">
+                                            <tr>
+                                                <td>MT100</td>
+                                                <td>Matemática</td>
+                                                <td>A</td>
+                                                <td>José Luiz Barros</td>
+                                            </tr>
+                                            <tr>
+                                                <td>PT200</td>
+                                                <td>Língua Portuguesa</td>
+                                                <td>A</td>
+                                                <td>Maria Joana dos Santos</td>
+                                            </tr>
+                                            <tr>
+                                                <td>FS123 </td>
+                                                <td>Fisica</td>
+                                                <td>A</td>
+                                                <td>Rogério Ceni Cabelo</td>
+                                            </tr>
+                                            <tr>
+                                                <td>CE453 </td>
+                                                <td>Ciencias</td>
+                                                <td>A</td>
+                                                <td>Helena Silva Cardoso</td>
+                                            </tr>
+                                            <tr>
+                                                <td>HT900 </td>
+                                                <td>Historia</td>
+                                                <td>A</td>
+                                                <td>Paulo Sousa Andrade</td>
+                                            </tr>
+                                            <tr>
+                                                <td>GE456 </td>
+                                                <td>Geografia</td>
+                                                <td>A</td>
+                                                <td>Ana Gleide Souza</td>
+                                            </tr>
+                                            <tr>
+                                                <td>QM320 </td>
+                                                <td>Quimica</td>
+                                                <td>A</td>
+                                                <td>Elisabete Faria Melo</td>
+                                            </tr>
+                                            <tr>
+                                                <td>BI432 </td>
+                                                <td>Biologia</td>
+                                                <td>A</td>
+                                                <td>Ana Cristina Silva</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mt-3">
+                                    <h5 class="fw-bold text-center">Segunda-Feira</h5>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-sm table-striped">
+                                            <thead class="text-center">
+                                                <tr>
+                                                    <th scope="col">Horário</th>
+                                                    <th scope="col">Disciplina</th>
+                                                    <th scope="col">Turma</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="table-group-divider">
+                                                <tr>
+                                                    <td>07:00-07:50</td>
+                                                    <td>MT100</td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>07:50-08:40 </td>
+                                                    <td>FS123 </td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>08:40-09:30 </td>
+                                                    <td>BI432</td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>09:30-10:20 </td>
+                                                    <td>FS123</td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10:30-11:20</td>
+                                                    <td>PT200</td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>11:20-12:10 </td>
+                                                    <td>HT900</td>
+                                                    <td>A</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mt-3">
+                                    <h5 class="fw-bold text-center">Terça-Feira</h5>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-sm table-striped">
+                                            <thead class="text-center">
+                                                <tr>
+                                                    <th scope="col">Horário</th>
+                                                    <th scope="col">Disciplina</th>
+                                                    <th scope="col">Turma</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="table-group-divider">
+                                                <tr>
+                                                    <td>07:00-07:50</td>
+                                                    <td>PT200</td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>07:50-08:40 </td>
+                                                    <td>QM320 </td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>08:40-09:30 </td>
+                                                    <td>CE456</td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>09:30-10:20 </td>
+                                                    <td>PT200</td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10:30-11:20</td>
+                                                    <td>PT200</td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>11:20-12:10 </td>
+                                                    <td>GE456</td>
+                                                    <td>A</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mt-3">
+                                    <h5 class="fw-bold text-center">Quarta-Feira</h5>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-sm table-striped">
+                                            <thead class="text-center">
+                                                <tr>
+                                                    <th scope="col">Horário</th>
+                                                    <th scope="col">Disciplina</th>
+                                                    <th scope="col">Turma</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="table-group-divider">
+                                                <tr>
+                                                    <td>07:00-07:50</td>
+                                                    <td>CE453</td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>07:50-08:40 </td>
+                                                    <td>CE453 </td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>08:40-09:30 </td>
+                                                    <td>MT100</td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>09:30-10:20 </td>
+                                                    <td>GE456</td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10:30-11:20</td>
+                                                    <td>GE456</td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>11:20-12:10 </td>
+                                                    <td>BI432</td>
+                                                    <td>A</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mt-3">
+                                    <h5 class="fw-bold text-center">Quinta-Feira</h5>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-sm table-striped">
+                                            <thead class="text-center">
+                                                <tr>
+                                                    <th scope="col">Horário</th>
+                                                    <th scope="col">Disciplina</th>
+                                                    <th scope="col">Turma</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="table-group-divider">
+                                                <tr>
+                                                    <td>07:00-07:50</td>
+                                                    <td>PT200</td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>07:50-08:40 </td>
+                                                    <td>PT200 </td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>08:40-09:30 </td>
+                                                    <td>HT900</td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>09:30-10:20 </td>
+                                                    <td>HT900</td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10:30-11:20</td>
+                                                    <td>GE456</td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>11:20-12:10 </td>
+                                                    <td>GE456</td>
+                                                    <td>A</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mt-3">
+                                    <h5 class="fw-bold text-center">Sexta-Feira</h5>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-sm table-striped">
+                                            <thead class="text-center">
+                                                <tr>
+                                                    <th scope="col">Horário</th>
+                                                    <th scope="col">Disciplina</th>
+                                                    <th scope="col">Turma</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="table-group-divider">
+                                                <tr>
+                                                    <td>07:00-07:50</td>
+                                                    <td>MT100</td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>07:50-08:40 </td>
+                                                    <td>MT100 </td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>08:40-09:30 </td>
+                                                    <td>FS123</td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>09:30-10:20 </td>
+                                                    <td>FS123</td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10:30-11:20</td>
+                                                    <td>BI432</td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>11:20-12:10 </td>
+                                                    <td>BI432</td>
+                                                    <td>A</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="position-absolute start-50 translate-middle-x">© 2022 PGE</footer>
+        </main>
+    </div>
+</body>
+
+</html>

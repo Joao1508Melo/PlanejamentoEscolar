@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	
+	<head>
+		<title>Notas</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../../../css/bootstrap.css">
+		<link rel="stylesheet" href="../../../css/administrador/main.css">
+		<link rel="stylesheet" href="../../../css/sidepanel-menu.css">
+		<link rel="icon" type="image/x-icon" href="../../../images/favicon.ico" />
+		<script src="../../../js/sidepanel-menu.js"></script>
+	</head>
+	
+	<body>
+		<div class="container-fluid">
+			<div class="header p-3">
+				<header>
+					<h1 class="title fw-bold floatleft">PGE</h1>
+					<h1 class="fw-bold center mt-md-2">Fatec Zona Sul</h1>
+					<h1 class="fw-bold floatright">MEC</h1>
+				</header>
+			</div>
+			<main>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12 border border-3 border-dark p-4">
+							<%- include("../../partial/_professor_painel.ejs"); %>
+							<div class="row">
+								<h1 class="title fw-bold text-center">Nova Nota</h1>
+								<% if (message !== "") { %>
+								<h1 style="font-size:42px; color:blue; text-align:center;" id='status' class='title2'><%= message %></h1>
+								<% } %>
+								<hr class="border border-dark border-1">
+								<div class="row">
+									<form method="post" action="/professor_notas_cadastrado">
+										<div class="row justify-content-center">
+											<div class="col-10 col-md-6">
+												<div class="row">
+													<div class="col-12 col-sm-6">
+														<div class="mb-3">
+															<label class="form-label">RA do Aluno</label>
+															<select class="form-select" id="ra_aluno" name="ra_aluno" required>
+																<% if(data.length){ for(var i = 0; i< data.length; i++) {%>
+																<option><%= data[i].ra%>
+																</option>
+																<% } }else{ %>
+																<!-- <div class="col-12 col-sm-6 col-lg-3 py-4 px-5">
+																	<h5 class="text-center fw-bold">Nenhum dado encontrado.</h5>
+																</div> -->
+																<% } %>
+															</select>
+														</div>
+													</div>
+													<div class="col-12 col-sm-6">
+														<div class="mb-3">
+															<label class="form-label">Disciplina</label>
+															<select class="form-select" id="cod_disciplina" name="cod_disciplina" required>
+																<% if(datab.length){ for(var i = 0; i< datab.length; i++) {%>
+																<option value="<%= datab[i].codigo%>"><%= datab[i].codigo%> - <%= datab[0].nome%>
+																</option>
+																<% } }else{ %>
+																<!-- <div class="col-12 col-sm-6 col-lg-3 py-4 px-5">
+																	<h5 class="text-center fw-bold">Nenhum dado encontrado.</h5>
+																</div> -->
+																<% } %>
+															</select>
+														</div>
+													</div>
+													<div class="col-12 col-sm-6">
+														<div class="mb-3">
+															<label class="form-label">P1</label>
+															<input type="text" class="form-control" id="p1" name="p1">
+														</div>
+													</div>
+													<div class="col-12 col-sm-6">
+														<div class="mb-3">
+															<label class="form-label">P2</label>
+															<input type="text" class="form-control" id="p2" name="p2">
+														</div>
+													</div>
+													<div class="col-12 col-sm-6">
+														<div class="mb-3">
+															<label class="form-label">T</label>
+															<input type="text" class="form-control" id="t" name="t">
+														</div>
+													</div>
+													<div class="col-12 col-sm-6">
+														<div class="mb-3">
+															<label class="form-label">Média</label>
+															<input type="text" class="form-control" id="media" name="media">
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-12 col-sm-6 d-grid gap-2 mb-sm-0 mb-2">
+														<button type="submit" class="btn btn-success">Salvar</button>
+													</div>
+													<div class="col-12 col-sm-6 d-grid gap-2">
+														<button type="reset" class="btn btn-danger">Limpar</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<footer class="position-absolute start-50 translate-middle-x">© 2023 PGE</footer>
+			</main>
+		</div>
+	</body>
+</html>
